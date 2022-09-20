@@ -25,8 +25,34 @@ async function showingInTheaters(req, res, next) {
     res.json({ data })
 }
 
+async function movieReviews(req, res, next) {
+    const response = await moviesService.movieReviews(req.params.movieId)
+    const data = response.map((item) => {
+        return {
+            "review_id": item.review_id, 
+            "content": item.content, 
+            "score": item.score,
+            "created_at": item.created_at,
+            "updated_at": item.updated_at,
+            "critic_id": item.critic_id,
+            "movie_id": item.movie_id,
+            "critic": {
+              "critic_id": item.critic_id, 
+              "preferred_name": item.preferred_name,
+              "surname": item.surname,
+              "organization_name": item.organization_name,
+              "created_at": item.created_at,
+              "updated_at": item.updated_at
+        }}
+    })
+
+    // console.log(data)
+    res.json({ data })
+}
+
 module.exports = {
     list: asyncErrorBoundary(list),
     read: [movieExists,read],
-    showingInTheaters: [movieExists, asyncErrorBoundary(showingInTheaters)]
+    showingInTheaters: [movieExists, asyncErrorBoundary(showingInTheaters)],
+    movieReviews: [movieExists, asyncErrorBoundary(movieReviews)]
 };

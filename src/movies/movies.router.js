@@ -18,4 +18,8 @@ router.route("/:movieId/theaters")
     .get(cors(), controller.showingInTheaters)
     .all(methodNotAllowed)
 
+router.route("/:movieId/reviews")
+    .get(cors(), controller.movieReviews)
+    .all(methodNotAllowed)
+
 module.exports = router;

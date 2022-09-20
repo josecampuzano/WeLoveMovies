@@ -4,8 +4,8 @@ This route will return a single movie by ID.
 
 There are four different cases to consider:
 
-- `GET /movies/:movieId`
-- `GET /movies/:movieId` (incorrect ID)
+DONE- `GET /movies/:movieId` 
+DONE- `GET /movies/:movieId` (incorrect ID)
 - `GET /movies/:movieId/theaters`
 - `GET /movies/:movieId/reviews`
 
@@ -94,20 +94,20 @@ The response from the server for a request to `/movies/1/reviews` should look li
 {
   "data": [
     {
-      "review_id": 1,
-      "content": "Lorem markdownum ...",
-      "score": 3,
-      "created_at": "2021-02-23T20:48:13.315Z",
-      "updated_at": "2021-02-23T20:48:13.315Z",
-      "critic_id": 1,
-      "movie_id": 1,
+      "review_id": 1, (r)
+      "content": "Lorem markdownum ...", (r)
+      "score": 3,(r)
+      "created_at": "2021-02-23T20:48:13.315Z",(r)
+      "updated_at": "2021-02-23T20:48:13.315Z",(r)
+      "critic_id": 1,(r)
+      "movie_id": 1,(r)
       "critic": {
-        "critic_id": 1,
-        "preferred_name": "Chana",
-        "surname": "Gibson",
-        "organization_name": "Film Frenzy",
-        "created_at": "2021-02-23T20:48:13.308Z",
-        "updated_at": "2021-02-23T20:48:13.308Z"
+        "critic_id": 1, (c)
+        "preferred_name": "Chana",(c)
+        "surname": "Gibson",(c)
+        "organization_name": "Film Frenzy",(c)
+        "created_at": "2021-02-23T20:48:13.308Z",(c)
+        "updated_at": "2021-02-23T20:48:13.308Z"(c)
       }
     }
     // ...

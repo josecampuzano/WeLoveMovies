@@ -12,7 +12,7 @@ There are two different cases to consider:
 Create a route that responds to the following request:
 
 ```
-GET /movies
+DONE - GET /movies
 ```
 
 The response from the server should look like the following:
@@ -38,7 +38,7 @@ The response from the server should look like the following:
 Update your route so that it responds to the following request:
 
 ```
-GET /movies?is_showing=true
+DONE - GET /movies?is_showing=true
 ```
 
 In the event where `is_showing=true` is provided, the route should return _only those movies where the movie is currently showing in theaters._ This means you will need to check the `movies_theaters` table.
