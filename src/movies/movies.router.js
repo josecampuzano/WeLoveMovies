@@ -10,6 +10,8 @@ router.route("/")
     .get(cors(), controller.list)
     .all(methodNotAllowed)
 
-
+router.route("/:movieId")
+    .get(cors(), controller.read)
+    .all(methodNotAllowed)
 
 module.exports = router;
