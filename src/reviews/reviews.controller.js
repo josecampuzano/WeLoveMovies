@@ -1,6 +1,5 @@
 const reviewsService = require("./reviews.service")
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary")
-const { read } = require("../movies/movies.controller")
 
 
 
