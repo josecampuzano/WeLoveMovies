@@ -3,23 +3,24 @@ const controller = require("./movies.controller");
 const methodNotAllowed = require("../errors/methodNotAllowed")
 const cors = require("cors")
 
-
+// enables cors for the entire router 
+router.use(cors())
 
 
 router.route("/")
-    .get(cors(), controller.list)
+    .get(controller.list)
     .all(methodNotAllowed)
 
 router.route("/:movieId")
-    .get(cors(), controller.read)
+    .get(controller.read)
     .all(methodNotAllowed)
 
 router.route("/:movieId/theaters")
-    .get(cors(), controller.showingInTheaters)
+    .get(controller.showingInTheaters)
     .all(methodNotAllowed)
 
 router.route("/:movieId/reviews")
-    .get(cors(), controller.movieReviews)
+    .get(controller.movieReviews)
     .all(methodNotAllowed)
 
 module.exports = router;
