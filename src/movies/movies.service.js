@@ -30,8 +30,16 @@ function read(movieId) {
 
 }
 
+function showingInTheaters(movieId) {
+    return knex("movies_theaters as mt")
+        // .join("movies_theaters as mt", "m.movie_id", "mt.movie_id")
+        .join("theaters as t", "mt.theater_id", "t.theater_id")
+        .select("t.*", "mt.is_showing", "mt.movie_id")
+        .where({ "mt.movie_id": movieId})
+}
 
 module.exports = {
     list,
     read,
+    showingInTheaters,
 }
