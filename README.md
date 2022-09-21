@@ -1,5 +1,7 @@
 # WeLoveMovies
 
+Please find fully deployed project here: [WeLoveMovies](https://we-love-movies-client-js.herokuapp.com)
+
 ### Project Description
 
 I have been tasked to work as a backend developer on a project called WeLoveMovies! As other developers work on the design and frontend experience of the web application, I am responsible for setting up the database and building out the specific routes so that the users can gain access to data about movies, theaters, and reviews. 
