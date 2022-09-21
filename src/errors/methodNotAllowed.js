@@ -1,3 +1,4 @@
+// used with .all to restrict methods not allowed on specific routes 
 function methodNotAllowed(req, res, next) {
     next({
         status: 405,

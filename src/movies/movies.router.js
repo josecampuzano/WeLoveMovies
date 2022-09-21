@@ -6,7 +6,6 @@ const cors = require("cors")
 // enables cors for the entire router 
 router.use(cors())
 
-
 router.route("/")
     .get(controller.list)
     .all(methodNotAllowed)

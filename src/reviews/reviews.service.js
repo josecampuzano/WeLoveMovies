@@ -1,7 +1,7 @@
 const knex = require("../db/connection")
 
 
-
+// reads review based on reviewId
 function read(reviewId) {
     return knex("reviews")
         .select("*")
@@ -9,6 +9,7 @@ function read(reviewId) {
         .first()
 }
 
+// updates the review with an updatedReview param
 function update(updatedReview) {
     return knex("reviews")
         // .select("*")
@@ -17,6 +18,7 @@ function update(updatedReview) {
         .then((updatedRecords) => updatedRecords[0])
 }
 
+// reads critic based on critic_id
 function getCritic(criticId) {
     return knex("critics")
         .select("*")
@@ -24,7 +26,7 @@ function getCritic(criticId) {
         .first()
 }
 
-
+// deletes review based on reviewId
 function destroy(reviewId) {
     return knex("reviews")
         .where({ review_id: reviewId })

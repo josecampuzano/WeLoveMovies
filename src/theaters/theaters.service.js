@@ -1,6 +1,6 @@
-const { select } = require("../db/connection")
 const knex = require("../db/connection")
 const reduceProperties = require("../utils/reduce-properties")
+
 
 function list(){
     return knex("theaters as t")

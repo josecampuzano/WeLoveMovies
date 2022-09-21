@@ -1,5 +1,6 @@
 const knex = require("../db/connection");
 
+// filters what list is showing based on is_showing query
 function list(isShowing) {
     if (isShowing === "true") {
         return listOnlyShowing();
@@ -7,11 +8,13 @@ function list(isShowing) {
     return listAll();
 }
 
+// lists all movies showing or not
 function listAll() {
     return knex("movies")
         .select("*")
 }
 
+// lists all movies that are showing based on is_showing query
 function listOnlyShowing() {
     return knex("movies as m")
         .join("movies_theaters as mt", "m.movie_id", "mt.movie_id")
@@ -20,6 +23,7 @@ function listOnlyShowing() {
         .where({ "mt.is_showing": true })
 }
 
+// reads a movie based on the movie_id
 function read(movieId) {
     return knex("movies")
         .select("*")
@@ -28,6 +32,7 @@ function read(movieId) {
 
 }
 
+// returns the theaters that is showing in that theater based on movie_id
 function showingInTheaters(movieId) {
     return knex("movies_theaters as mt")
         .join("theaters as t", "mt.theater_id", "t.theater_id")
@@ -35,6 +40,7 @@ function showingInTheaters(movieId) {
         .where({ "mt.movie_id": movieId})
 }
 
+// returns movie reviews based on movie_id
 function movieReviews(movieId) {
     return knex("reviews as r")
         .join("critics as c", "r.critic_id", "c.critic_id")

@@ -2,7 +2,7 @@ const reviewsService = require("./reviews.service")
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary")
 
 
-
+// awaits service read and verifies that the review exists; if it does, it stores it in res.locals.review
 async function reviewExists(req, res, next){
     const review = await reviewsService.read(Number(req.params.reviewId))
     if (review) {
@@ -15,6 +15,8 @@ async function reviewExists(req, res, next){
     })
 }
 
+// awaits service update; requires an updatedReview parameter to call service update 
+// after update call, critic information gets assigned from service getCritic 
 async function update(req, res, next) {
     const updatedReview = {
         ...res.locals.review,
@@ -29,6 +31,7 @@ async function update(req, res, next) {
     res.json({ data: readNewReview })
 }
 
+// awaits service destroy 
 async function destroy(req, res, next) {
     const { review } = res.locals
     await reviewsService.delete(review.review_id)
@@ -39,10 +42,10 @@ async function destroy(req, res, next) {
 module.exports = {
     update: [
         reviewExists,
-        update,
+        asyncErrorBoundary(update),
     ],
     delete: [
         reviewExists,
-        destroy,
+        asyncErrorBoundary(destroy),
     ]
 }

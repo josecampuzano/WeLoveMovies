@@ -1,4 +1,4 @@
-
+// creates the theaters table
 exports.up = function(knex) {
   return knex.schema.createTable("theaters", (table) => {
     table.increments("theater_id").primary();
@@ -12,6 +12,7 @@ exports.up = function(knex) {
   })
 };
 
+// drops the theaters table
 exports.down = function(knex) {
   return knex.schema.dropTable("theaters");
 };
