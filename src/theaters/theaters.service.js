@@ -1,7 +1,9 @@
 const knex = require("../db/connection")
 const reduceProperties = require("../utils/reduce-properties")
 
-
+// returns information from theaters, movies_theaters, and movies tables
+// configures reduceMovies to format the data in the .then
+// calls the function reduceMovies to return the data in correct format
 function list(){
     return knex("theaters as t")
     .join("movies_theaters as mt", "t.theater_id", "mt.theater_id")
@@ -29,8 +31,6 @@ function list(){
     // console.log("THIS IS THE REDUCED VERSION", JSON.stringify(reduceMovies(data), null, 4))
     })
 }
-
-
 
 module.exports = {
     list
