@@ -61,9 +61,8 @@ Download the files to your computer.
 
 Run ``` npm install ``` to install the project.
 
-Visit the following [repository](https://github.com/Thinkful-Ed/starter-movie-front-end) if you would like to see your project connected to a frontend application:
+Visit this [repository](https://github.com/Thinkful-Ed/starter-movie-front-end) if you would like to see the project connected to the frontend application.
 
-Starter Code: WeLoveMovies
 Instructions are included there on how to get the project up and running.
 
 ### Built With
