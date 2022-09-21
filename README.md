@@ -6,7 +6,7 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 * [![React][React.js]][React-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![JQuery][JQuery.com]][JQuery-url]
+* [![JavaScript][JavaScript-shield]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -43,3 +43,6 @@ This section should list any major frameworks/libraries used to bootstrap your p
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com 
+[JavaScript-url]: https://devdocs.io/javascript/
+[JavaScript-shield]: https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black
+
