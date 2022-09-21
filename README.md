@@ -23,6 +23,49 @@ From the Home Page you can browse all movies and click on the one you would like
 
 ![alt text](https://github.com/josecampuzano/WeLoveMovies/blob/main/images/MoviesBody.png?raw=true)
 
+#### All Movies Page
+
+From the All Movies Page you can browse all movies in further detail! This page includes a description of the movie along with other supporting details such as: 
+  - Runtime
+  - Rating
+  - Average Review Rating 
+  - See More Button 
+
+![alt text](https://github.com/josecampuzano/WeLoveMovies/blob/main/images/AllMovies.png?raw=true)
+
+#### More Details Page
+
+From the More Details Page you can browse all the details of a specific movie! This page includes all of the following for each movie:
+  - Description
+  - Runtime
+  - Rating
+  - Average Review Rating 
+  - Now Showing 
+  - Reviews (with capability to upvote or downvote a review!) 
+
+![alt text](https://github.com/josecampuzano/WeLoveMovies/blob/main/images/MovieDetail.png?raw=true)
+
+
+#### All Theaters Page 
+
+From the All Theaters Page you can browse all the theaters and the movies that are playing at each theater at a glance! This functionality allows for a user to quickly check if the movie they are interested in watching is playing at a theater nearby!
+
+![alt text](https://github.com/josecampuzano/WeLoveMovies/blob/main/images/AllTheater.png?raw=true)
+
+
+### Project Set Up
+
+Follow the instructions below to get this project up and running on your own machine:
+
+Download the files to your computer.
+
+Run ``` npm install ``` to install the project.
+
+Visit the following [repository](https://github.com/Thinkful-Ed/starter-movie-front-end) if you would like to see your project connected to a frontend application:
+
+Starter Code: WeLoveMovies
+Instructions are included there on how to get the project up and running.
+
 ### Built With
 
 This project was built with the following frameworks and tools:
